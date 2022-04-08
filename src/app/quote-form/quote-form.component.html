@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <h2 class="heading">Add Quote</h2>
     <!-- <hr> -->
-    <form (ngSubmit)='addQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
+    <form (ngSubmit)='submitQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
         <div class="form-group">
           <label for="submitter">Your Name</label>
           <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="name" #submiter='ngModel' >
