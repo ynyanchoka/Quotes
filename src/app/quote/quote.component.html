@@ -11,12 +11,12 @@
         </div>
         <div class="col-sm-9">
           <div class="all-cards">
-            <div *ngFor="let quote of sortQuotes let i= index" class="card" style="width: 24rem;"  >
+            <div *ngFor="let quote of quotes let i= index" class="card" style="width: 24rem;"  >
               <div class="card-body">
                 <h4 class="card-title" appHighlight >{{quote.title}} {{quote.maxlikes}}<button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
                 <p class="card-text" id="param">{{quote.quote}}</p>
                 <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
-                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
+                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date}}</span></span></span>
                
               </div>
             </div>

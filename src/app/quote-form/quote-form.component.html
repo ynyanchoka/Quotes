@@ -8,10 +8,10 @@
           <label for="submitter">Your Name</label>
           <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="name" #submiter='ngModel' >
           <div *ngIf="submitter.invalid && submitter.dirty" class="alert alert-danger">
-            <div *ngIf="name.errors.required">
+            <div *ngIf="submitter.errors.required">
                 Your name is required.
             </div>
-            <div *ngIf="name.errors.minlength">
+            <div *ngIf="submitter.errors.minlength">
               Name is at least 3 characters long.
             </div>
           </div> 
