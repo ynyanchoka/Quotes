@@ -45,7 +45,14 @@ export class QuoteComponent implements OnInit {
   showDetails (index:number){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
-
+  // toggleText(index:any) {
+  //   /* function for toggling quote small text */
+  //   this.quotes[index].showMore = !this.quotes[index].showMore;
+  //   if (this.quotes[index].showMore)
+  //     this.quotes[index].smallText = 'see less';
+  //   else
+  //     this.quotes[index].smallText = 'see more';
+  // }
  
   constructor() { }
 

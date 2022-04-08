@@ -1,6 +1,7 @@
 export class Quote {
     showDetails: boolean;
     completeDate!: Date;
+    showMore: boolean;
     constructor(
       public id:number,
       public submitter:string,
@@ -11,6 +12,7 @@ export class Quote {
       public upVotes:number,
       public downVotes:number){
       this.showDetails=false;
+      this.showMore = false;
     }
 
 }

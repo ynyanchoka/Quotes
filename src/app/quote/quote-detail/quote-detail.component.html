@@ -1,6 +1,10 @@
 
 <div class="container-fluid" id="buttons">
+  <span class="card-subtitle mb-2">Posted by: <span id="submitter">{{quote.submitter}}</span><span id="date"> on: <span id="datecolor">{{quote.datePosted|date}}</span><span id="when"> {{quote.datePosted|datePipe}} days ago.</span></span></span>
+  <br>
   <button class="btn btn-sm btn-success" (click)='upvote()'>{{quote.upVotes}} <i class="fa fa-thumbs-up" id="like"></i></button> 
-  <button class="btn btn-sm hate" id="hate" (click)='downvote()'>{{quote.downVotes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
+  &nbsp;
+  <button class="btn btn-sm btn-success" id="hate" (click)='downvote()'>{{quote.downVotes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 	
+  &nbsp;
   <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
 </div>
