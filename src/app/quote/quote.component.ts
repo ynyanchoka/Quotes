@@ -33,6 +33,29 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  highlightHighest() {
+    let quotesUpvote = []
+    let highestUpVote: number
+    for (let i = 0; i < this.quotes.length; i++) {
+      quotesUpvote.push(this.quotes[i].upVote)
+    }
+
+    quotesUpvote.sort(function (a, b) {
+      return b - a
+    })
+    highestUpVote = quotesUpvote[0]
+    return highestUpVote;
+  }
+
+  get sortQuotes() {
+    return this.quotes.sort((a, b) => {
+      return <any > new Date(b.submissionDate) - < any > new Date(a.submissionDate);
+    });
+  }
+
+  addNewQuote(quote: Quote) {
+    this.quotes.unshift(quote)
+  }
   constructor() { }
 
   ngOnInit(): void {
