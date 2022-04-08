@@ -14,6 +14,10 @@ export class QuoteComponent implements OnInit {
     new Quote ( 'Do not judge each day by the harvest you reap but by the seeds you plant.','Robert Louis', 'MD Douglas',new Date(2022, 2, 5),0,0),
     new Quote ( 'Do not judge each day by the harvest you reap but by the seeds you plant.','Robert Louis', 'MD Douglas',new Date(2022, 2, 5),0,0),
   ];
+// show goal details
+  toggleDetails(index:number) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
   constructor() { }
 
   ngOnInit(): void {
