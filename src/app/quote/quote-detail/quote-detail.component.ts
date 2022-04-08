@@ -1,5 +1,6 @@
-import { Quote } from '@angular/compiler';
+
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Quote } from 'src/app/quote';
 
 // import { EventEmitter } from 'stream';
 
@@ -13,6 +14,16 @@ export class QuoteDetailComponent implements OnInit {
 
 @Input () quote!:Quote;
 @Output () isDelete = new EventEmitter <boolean> ();
+
+deleteQuote(read:boolean){
+  this.isDelete.emit(read);
+}
+upvote(){
+  this.quote.upVotes+=1;
+}
+downvote(){
+  this.quote.downVotes+=1;
+}
 
 
   constructor() { }
