@@ -11,19 +11,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class QuoteDetailComponent implements OnInit {
 
-  @Input () quote!:Quote;
-  @Output() deleteQuote = new EventEmitter<boolean>();
-  
-  Delete(yesDelete: boolean) { 
-    this.deleteQuote.emit(yesDelete);
-  }
-  upVote () { 
-    this.quote.upVote++ ;
-   
-  }
-  downVote()  { 
-  this.quote.downVote++;
-}
+
 
 
   constructor() { }
