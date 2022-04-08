@@ -1,6 +1,6 @@
 export class Quote {
     showDetails: boolean;
-  completeDate: string | number | Date;
+    completeDate!: Date;
     constructor(
       public id:number,
       public submitter:string,
