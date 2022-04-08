@@ -10,7 +10,7 @@ export class Quote {
       public datePosted: Date,
       public upVotes:number,
       public downVotes:number){
-    this.showDetails=false;
+      this.showDetails=false;
     }
 
 }

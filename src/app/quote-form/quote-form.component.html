@@ -4,44 +4,26 @@
     <h2 class="heading">Add Quote</h2>
     <!-- <hr> -->
     <form (ngSubmit)='submitQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
+       
         <div class="form-group">
-          <label for="submitter">Your Name</label>
-          <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="name" #submiter='ngModel' >
-          <div *ngIf="submitter.invalid && submitter.dirty" class="alert alert-danger">
-            <div *ngIf="submitter.errors.required">
-                Your name is required.
-            </div>
-            <div *ngIf="submitter.errors.minlength">
-              Name is at least 3 characters long.
-            </div>
-          </div> 
-        </div>
-        <div class="form-group">
-          <label for="name">Quote Tittle</label>
+          <label for="quote">Quote Tittle</label>
           <input type="text" required class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel'>
-          <div *ngIf="title.invalid && title.dirty" class="alert alert-danger">
-            <div *ngIf="title.errors.required">
-                Title is required.
-            </div>
-          </div>
+          
         </div>
         <div class="form-group">
           <label for="description">Quote</label>
-          <textarea class="form-control" id="quote" rows="2" required [(ngModel)]="quoted.quote" name="quote" #quote='ngModel'></textarea>
-          <div *ngIf="quote.invalid && quote.dirty" class="alert alert-danger">
-            <div *ngIf="quote.errors.required">
-                Quote can not be empty.
-            </div>
-          </div>
+          <textarea class="form-control" id="quote" rows="2" required [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel'></textarea>
+         
         </div>
         <div class="form-group">
           <label for="name">Quote Author</label>
-          <input type="text" required class="form-control" id="author"[(ngModel)]="quoted.author" name="author" #author='ngModel'>
-          <div *ngIf="title.invalid && title.dirty" class="alert alert-danger">
-            <div *ngIf="title.errors.required">
-                Author Name is required.
-            </div>
-          </div>
+          <input type="text" required class="form-control" id="author"[(ngModel)]="newQuote.author" name="author" #author='ngModel'>
+         
+        </div>
+        <div class="form-group">
+          <label for="submitter">Posted by:</label>
+          <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="name" #submiter='ngModel' >
+           
         </div>
         <button type="submit" class="btn btn-sm btn-success">Add Quote</button>
     </form>

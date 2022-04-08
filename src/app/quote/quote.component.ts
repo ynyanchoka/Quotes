@@ -42,7 +42,7 @@ export class QuoteComponent implements OnInit {
   }
   
   // show details
-  displayInfo(index:number){
+  showDetails (index:number){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
 
