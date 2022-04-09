@@ -13,9 +13,10 @@ label{
 }
 .btn{
     color: white;
-    background: transparent;
+    background-color: #daa520 ;
+    border-color: #daa520;
     font-weight: 570;
-    border-color: white;
+    
 }
 .container-fluid{
     background-color: rgba(0, 0, 0, 0.4);

@@ -18,7 +18,7 @@
                 <h4 id="cardtitle">{{quote.title}}</h4>
                 <p class="card-text" id="param">{{quote.quote}}</p>
                 <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}}  </h6>
-                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-info btn-sm" id="quotes-button" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
+                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-show btn-sm" id="quotes-button" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
                 <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
               </div>
 
@@ -26,7 +26,7 @@
                 <h4 id="cardtitle">{{quote.title}}</h4>
                 <p class="card-text" id="param">{{quote.quote}}</p>
                 <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}}  </h6>
-                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-info btn-sm" id="quotes-button"  >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
+                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-show btn-sm" id="quotes-button" style="color: aliceblue;" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
                 <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
               </div>
             </div>

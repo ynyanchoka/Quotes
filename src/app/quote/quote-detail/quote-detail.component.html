@@ -2,9 +2,9 @@
 <div class="container-fluid" id="buttons">
   <span class="card-subtitle mb-2">Posted by: <span id="submitter">{{quote.submitter}}</span>&nbsp;&nbsp;<span id="date"><span id="datecolor">{{quote.datePosted|date}}</span><span id="time"> <br> {{quote.datePosted|datePipe}} days ago.</span></span></span>
   <br> <br>
-  <button class="btn btn-sm btn-success" (click)='upvote()'>{{quote.upVotes}} <i class="fa fa-thumbs-up" id="upvote" appHighlight></i></button> 
+  <button class="btn btn-sm btn-success" (click)='upvote()'>{{quote.upVotes}} &nbsp; <i class="fa fa-thumbs-up" id="upvote" appHighlight></i></button> 
   &nbsp;   &nbsp;
-  <button class="btn btn-sm btn-danger" id="hate" (click)='downvote()'>{{quote.downVotes}} <i class="fa fa-thumbs-down" id="downvote" appHighlight></i></button> 	
+  <button class="btn btn-sm btn-danger" id="hate" (click)='downvote()'>{{quote.downVotes}} &nbsp;<i class="fa fa-thumbs-down" id="downvote" appHighlight></i></button> 	
   &nbsp;
-  <button class="btn btn-sm btn-danger" id="deleted" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
+  <button class="btn btn-sm btn-danger" id="deleted" (click)='deleteQuote(true)'> <i class="fa fa-trash" id="delete"></i></button> 
 </div>

@@ -17,3 +17,13 @@
 #deleted{
     float:right;
 }
+.btn-success{
+    background-color: transparent;
+    border-color: transparent;
+
+}
+.btn-danger{
+    background-color: transparent;
+    border-color: transparent;
+
+}

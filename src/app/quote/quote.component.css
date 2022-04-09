@@ -24,6 +24,14 @@ h4{
     font-family: 'Roboto', sans-serif,cursive;
     /* font-style: italic; */
 }
+.btn-show{
+    /* background-color: rgb(254,223,181); */
+    /* background-color: #daa520 ; */
+    background-color: transparent;
+    border-color: #daa520;
+ 
+
+}
 span{
     font-family: 'Roboto', sans-serif;
 }

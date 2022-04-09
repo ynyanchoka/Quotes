@@ -15,7 +15,7 @@ export class HighlightDirective {
     this.textDeco("None")
   }
   private textDeco(action:string){
-    this.elem.nativeElement.style.backgroundColor='purple';
+    this.elem.nativeElement.style.backgroundColor='#001d49';
   }
 
 }
