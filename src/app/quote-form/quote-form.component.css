@@ -29,3 +29,12 @@ label{
 .formsy{
     margin-right: 35px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .formsy {
+     width: 100%;
+     margin-bottom: 20px;
+     margin-top: 20px;
+    }
+  }
