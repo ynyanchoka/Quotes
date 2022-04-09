@@ -1,14 +1,16 @@
+<div class="intro">
+  <span style="text-align: center;"><h1 id="quotzilla">Quotzilla</h1></span>
+  <span style="text-align: center;" ><h4>Inspiring people one quote after another...</h4></span>
+</div>
 
 <div class="container">
   <div class="overlay">
-    <h1>Today's quotes</h1>
+    <h2>Today's top pick quotes:</h2>
     <br>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3">
-          <app-quote-form (addQuote)="addedQuote($event)"></app-quote-form>
-        </div>
-        <div class="col-sm-9">
+        
+        <div class="col-sm-8">
           <div class="all-cards">
             <div *ngFor="let quote of appquotes let i= index" class="card" style="width: 24rem;"  >
               
@@ -29,6 +31,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <!-- form -->
+        <div class="col-sm-4">
+          <app-quote-form (addQuote)="addedQuote($event)"></app-quote-form>
         </div>
       </div>
     </div>

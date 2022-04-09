@@ -2,10 +2,15 @@
     font-family: 'Roboto', sans-serif; 
     color: white;
 }
-h1{
+#quotzilla{
+
+    font-weight: bolder;
+    font-size: 50px;
+}
+h2{
     font-family: 'Roboto', sans-serif; 
     color: white;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bolder;
     padding-bottom: 2%;
     padding-top: 2%;
@@ -22,6 +27,9 @@ h4{
 span{
     font-family: 'Roboto', sans-serif;
 }
+.card-subtitle {
+    font-style: italic;
+}
 .overlay{
     background-color:rgba(0, 0.3, 0.5, 0.4);
     border-radius: 5px;
@@ -36,7 +44,10 @@ span{
 .all-cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    gap: 11px;
+
     
 }
 #quotes-button{
