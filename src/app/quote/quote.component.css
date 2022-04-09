@@ -89,3 +89,30 @@ span{
     text-align: left;
 
 }
+footer {
+    /* position: fixed; */
+    margin-bottom:0;
+    left: 0;
+    right: 0;
+    padding-top: 40px;
+    background-color: #daa520;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .btn-sign{
+      background-color: #001d49;
+  }
+  .pb-0.row {
+      margin-top: 0%;
+      margin-bottom: 0%;
+  }
+  .ff{
+      height: max-content;
+  }
+  .social-links .fa{
+      color: #001d49;
+  }
