@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
     new Quote (1,'John Doe','Purpose of life', 'The purpose of our lives is to be happy.','Dalai Lama',new Date(2022, 1, 5),0,0),
     new Quote (1,'Ross Breadmore','Life happens', 'Life is what happens when you are busy making other plans.','John Lenon',new Date(2022, 3, 6),0,0),
-    new Quote (1,'Danny Drinkwater','Live wisely', 'Get busy living or get busy dying.','Stephen King',new Date(2022, 2, 1),0,0),
+    new Quote (1,'Danny Drinkwater','Live wisely', 'Get busy living or get busy dying.','Stephen King',new Date(2021, 2, 1),0,0),
     new Quote (1,'Erik Ten Hag','Live right', 'You only live once, but if you do it right, once is enough.','Robert Louis',new Date(2022, 4, 5),0,0),
     new Quote (1,'Jadon Sancho','Live your life', 'Your time is limited, so do not waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.','Steve Jobs',new Date(2022, 2, 5),0,0),
     new Quote (1,'Cristiano Ronaldo','Judge not', 'Do not judge each day by the harvest you reap but by the seeds you plant.','Robert Louis',new Date(2022, 3, 2),0,0),
