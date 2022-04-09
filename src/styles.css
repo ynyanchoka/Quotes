@@ -1,9 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-body{
-    background-image: url("../src/assets/greg-rosenke-6QnEf_b47eA-unsplash.jpg");
-    /* background-image: url(../src/assets/field-g2cb7e8e3f_1920.jpg); */
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
