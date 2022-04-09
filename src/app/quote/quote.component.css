@@ -1,5 +1,6 @@
 *{
     font-family: 'Roboto', sans-serif; 
+    color: white;
 }
 h1{
     font-family: 'Roboto', sans-serif; 
@@ -36,12 +37,16 @@ span{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 #quotes-button{
     float: right;
 } 
 .card{
     margin-bottom: 2%;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 3px 2px black;
+        
 
 }
 .card-text{

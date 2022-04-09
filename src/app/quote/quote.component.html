@@ -1,9 +1,8 @@
 
 <div class="container">
   <div class="overlay">
-    <h1>
-      {{ title | titlecase }}
-    </h1>
+    <h1>Today's quotes</h1>
+    <br>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3">
@@ -13,15 +12,20 @@
           <div class="all-cards">
             <div *ngFor="let quote of appquotes let i= index" class="card" style="width: 24rem;"  >
               
-              <div class="card-body">
+              <div class="card-body"appHighlight *ngIf="highlightHighest() === quote.upVotes && quote.upVotes > 0" >
                 <h4 id="cardtitle">{{quote.title}}</h4>
                 <p class="card-text" id="param">{{quote.quote}}</p>
                 <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}}  </h6>
-                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-info btn-sm" id="quotes-button" >See more</button></h4>
-                <!-- <span class="card-subtitle mb-2">Posted by: <span id="submitter">{{quote.submitter}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date}}</span><span id="when"> {{quote.datePosted|datePipe}} days ago.</span></span></span> -->
+                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-info btn-sm" id="quotes-button" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
                 <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
+              </div>
 
-               
+              <div class="card-body"*ngIf="highlightHighest() !== quote.upVotes || quote.upVotes === 0" >
+                <h4 id="cardtitle">{{quote.title}}</h4>
+                <p class="card-text" id="param">{{quote.quote}}</p>
+                <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}}  </h6>
+                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-info btn-sm" id="quotes-button"  >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
+                <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
               </div>
             </div>
           </div>

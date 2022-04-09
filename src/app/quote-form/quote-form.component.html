@@ -7,25 +7,32 @@
        
         <div class="form-group">
           <label for="quote">Quote Tittle</label>
-          <input type="text" required class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel' required>
-         
-        </div>
+          <input type="text" class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel' required>
+          <div class=" alert alert-danger" *ngIf = "!title.valid"  >
+            Quote is required
+          </div>
+       </div>
         <br>
         <div class="form-group">
           <label for="description">Quote</label>
-          <textarea class="form-control" id="quote" rows="7" required [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel'></textarea>
-          <!-- <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-            A quote is required
-          </div> -->
+          <textarea class="form-control" id="quote" rows="7" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required></textarea>
+         <!-- validating -->
+         <div class=" alert alert-danger" *ngIf = "quote.touched && !quote.valid"  >
+           quote is required
+         </div>
+         
+       
+
+    
          
         </div>
         <br>
         <div class="form-group">
           <label for="name">Quote Author</label>
           <input type="text" required class="form-control" id="author"[(ngModel)]="newQuote.author" name="author" #author='ngModel'>
-          <!-- <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+          <div *ngIf = "quote.touched && author.valid || author.pristine" class="alert alert-danger">
             Author is required
-          </div> -->
+          </div>
         </div>
         <br>
         <div class="form-group">

@@ -17,3 +17,10 @@ label{
     font-weight: 570;
     border-color: white;
 }
+.container-fluid{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    padding-bottom: 5%;
+    box-shadow: 2px 2px 3px 2px black;
+    margin-bottom: 5%;
+}
