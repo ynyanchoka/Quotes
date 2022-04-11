@@ -1,5 +1,5 @@
 <div class="intro">
-  <span style="text-align: center;"><i class="fa-solid fa-quote-right-5x"></i><h1 id="quotzilla">Quotzilla</h1></span>
+  <span style="text-align: center;"><h1 id="quotzilla">Quotzilla</h1></span>
   <span style="text-align: center;" ><h4>Inspiring people one quote after another ...</h4></span>
 </div>
 <br>
@@ -13,7 +13,6 @@
   <div class="overlay">
     <h2 id="today">Top pick quotes:</h2>
     <br>
-    <div class="container-fluid">
       <div class="row">
         
         <div class="col-md-8">
@@ -22,17 +21,17 @@
               
               <div class="card-body"appHighlight *ngIf="highlightHighest() === quote.upVotes && quote.upVotes > 0" >
                 <h4 id="cardtitle">{{quote.title}}</h4>
-                <p class="card-text" id="param">{{quote.quote}}</p>
-                <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}}  </h6>
-                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-show btn-sm" id="quotes-button" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
+                <p class="card-text" >{{quote.quote}}</p>
+                <h6 class="mb-2 text-muted"> - {{quote.author}}  </h6>
+                <h4 class="card-title"><button (click)='showDetails(i)' class="btn btn-show btn-sm" id="quotes-button" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
                 <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
               </div>
 
               <div class="card-body"*ngIf="highlightHighest() !== quote.upVotes || quote.upVotes === 0" >
                 <h4 id="cardtitle">{{quote.title}}</h4>
-                <p class="card-text" id="param">{{quote.quote}}</p>
-                <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}}  </h6>
-                <h4 class="card-title" appHighlight ><button (click)='showDetails(i)' class="btn btn-show btn-sm" id="quotes-button" style="color: aliceblue;" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
+                <p class="card-text">{{quote.quote}}</p>
+                <h6 class="mb-2 text-muted"> - {{quote.author}}  </h6>
+                <h4 class="card-title" ><button (click)='showDetails(i)' class="btn btn-show btn-sm" id="quotes-button" style="color: aliceblue;" >{{isShowMore ? 'Show more': 'Show Less'}}</button></h4>
                 <app-quote-detail *ngIf='quote.showDetails' bind-quote='quote' (isDelete)='quoteDelete($event,i)'></app-quote-detail>
               </div>
             </div>
@@ -43,54 +42,43 @@
           <app-quote-form (addQuote)="addedQuote($event)"></app-quote-form>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
-<footer class="ff">
+<footer class="footer-quote">
   <div class="container p-4 pb-0">
     <form action="">
-      <!--Grid row-->
       <div class="row">
-        <!--Grid column-->
         <div class="col-auto mb-4 mb-md-0">
           <p class="pt-2">
             <strong style=" color: #001d49;">Sign up to recieve daily quotes</strong>
           </p>
         </div>
-        <!--Grid column-->
 
-        <!--Grid column-->
         <div class="col-md-5 col-12 mb-4 mb-md-0">
-          <!-- Email input -->
           <div class="form-outline mb-4">
-            <input type="email" id="form5Example25" class="form-control" required/>
-            <label class="form-label" for="form5Example25" style="color: #001d49;">Email address</label>
+            <input type="email"class="form-control" required/>
+            <label class="form-label"style="color: #001d49;">Email address</label>
           </div>
         </div>
-        <!--Grid column-->
 
-        <!--Grid column-->
         <div class="col-auto mb-4 mb-md-0">
-          <!-- Submit button -->
           <button type="submit" class="btn btn-sign mb-4">
             Subscribe
           </button>
         </div>
-        <!--Grid column-->
+      
       </div>
-      <!--Grid row-->
+     
     </form>
   </div>
   <div class="footer-content">
     <h1 style="color: #001d49;">QUOTZILLA</h1>
-    <!-- <p>This is a pizza placeLorem ipsum dolor sit amet consectetur, adipisicing elit. Quam maxime eius expedita reiciendis in, beatae aliquam repudiandae molestias ad quod odio, architec</p> -->
     <div class="social-links">
       <a href="#"><i class="fa fa-facebook-f"></i></a> &nbsp;
       <a href="#"><i class="fa fa-twitter"></i></a>  &nbsp;
       <a href="#"><i class="fa fa-instagram"></i></a>  &nbsp;
       <a href="#"><i class="fa fa-pinterest-p"></i></a>  &nbsp;
-      <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
      
     </div>
     <p style="color: #001d49;">© 2022 Copyright</p>

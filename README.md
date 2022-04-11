@@ -16,21 +16,19 @@ By Ymelda Monari
 
 ## Description
 
-This is an angular cli application that shows quotes, allow the user to input new quote like and dislike quote and even delete the quote.
+This is an angular cli application that allows the user to input new quote, like and dislike quotes and even delete the quote.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Project resources
 The following is a live-link to the project's site
 
-Link : `https://github.com/ynyanchoka/Quotes.git`
+Link : `ynyanchoka.github.io/quotes/`
 
 ## Requirements
 + Either a smartphone, computer or tablet
 + An access to the internet
 
 ## Behaviour Driven Development (BDD)
-  ### Behaviour
-   - Page has cards that contain the quotes posted and a form to add other quotes.
  ### Input 
    - User fills the quote title,quote, quote author and  the name of the person who submitted it in the form.
 ### Output

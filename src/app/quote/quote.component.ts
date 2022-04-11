@@ -50,11 +50,10 @@ export class QuoteComponent implements OnInit {
 
 
   highlightHighest() {
-    /* function for getting quote with highest vote*/
     let quotesUpvote = []
     let highestUpVote: number
-    for (let j = 0; j < this.quotes.length; j++) {
-      quotesUpvote.push(this.quotes[j].upVotes)
+    for (let i = 0; i < this.quotes.length; i++) {
+      quotesUpvote.push(this.quotes[i].upVotes)
     }
 
     quotesUpvote.sort(function (a, b) {
